@@ -2,12 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 export default function Home() {
-  /**<li>
-            <Link href="/gameLocal">Game Local</Link>
-          </li>
-          <li>
-            <Link href="/adminLocal">Admin Local</Link>
-          </li> */
   return (
     <>
       <div

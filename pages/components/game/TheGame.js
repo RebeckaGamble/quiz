@@ -24,7 +24,7 @@ function TheGame() {
     //if answer
     if (currentQuestionIndex < questions.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      console.log(currentQuestionIndex);
+     // console.log(currentQuestionIndex);
       setChosenAnswer(null); // Reset chosen answer for the next question
     }
   };
@@ -57,14 +57,14 @@ function TheGame() {
   const currentQuestionNumber = currentQuestionIndex + 1;
 
   return (
-    <div className="flex flex-col py-10 sm:pt-10 sm:pb-20 mx-auto w-screen md:w-[800px] md:px-10 md:shadow-2xl md:border-8 rounded-sm md:border-slate-400">
+    <div className="flex flex-col py-10 sm:pt-10 sm:pb-20 mx-auto w-screen md:w-[800px] md:px-10 md:shadow-2xl rounded-sm">
       <h1 className="font-bold text-2xl text-center py-8">Quiz</h1>
-      <div className=" md:border-4 md:border-black md:shadow-xl">
-        <div className="relative py-4 mx-auto flex flex-col min-w-[320px] w-full max-w-[700px] bg-blue-800 items-center justify-center md:border-4 md:border-white">
+      <div className="md:border-4 md:border-slate-400 md:shadow-xl">
+        <div className="relative py-4 mx-auto flex flex-col min-w-[320px] w-full max-w-[7o0px] bg-slate-50 items-center justify-center ">
           {/* Pass current question data to the TestQuizCard component */}
           {currentQuestionIndex < questions.length && (
             <>
-              <div className="text-white mb-4">
+              <div className="text-slate-900 mb-4">
                 Question {currentQuestionNumber} / {questions.length}
               </div>
               <div className="w-[80%]">
@@ -80,7 +80,7 @@ function TheGame() {
                 <button
                   onClick={handleNextQuestion}
                   disabled={disableNext} // Disable based on state
-                  className="text-[#001e4d] bg-white font-semibold px-4 py-1 rounded-md"
+                  className="text-white hover:uppercase bg-pink-400 font-semibold px-4 py-1 rounded-md"
                 >
                   Next
                 </button>
@@ -94,27 +94,23 @@ function TheGame() {
           )}
           {/* when finished quiz, show */}
           {currentQuestionIndex === questions.length && (
-            <div className="text-white flex flex-col gap-1">
+            <div className="text-slate-700 flex flex-col gap-1">
               <h4 className="text-2xl font-semibold py-6">Quiz completed!</h4>
               <p className="font-semibold text-xl">
                 Total Questions: {questions.length}
               </p>
               <p>
                 Right Answers:{" "}
-                <span className="text-green-500 text-xl">
-                  {rightAnswers}
-                </span>{" "}
+                <span className="text-green-500 text-xl">{rightAnswers}</span>{" "}
               </p>
               <p>
                 Wrong Answers:{" "}
-                <span className="text-red-500 text-xl">
-                  {wrongAnswers}
-                </span>{" "}
+                <span className="text-red-500 text-xl">{wrongAnswers}</span>{" "}
               </p>
               <div className="w-full py-6">
                 <button
                   onClick={restartQuiz}
-                  className="px-3 py-1 border border-slate-700 rounded-md bg-white text-blue-800 font-semibold tracking-wider my-2 hover:scale-105 hover:text-white hover:bg-green-600 hover:uppercase"
+                  className="px-3 py-1 rounded-md bg-purple-400 text-white font-semibold tracking-wider my-2 hover:uppercase"
                 >
                   Play again
                 </button>

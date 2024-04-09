@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 const AddNewQuestion = ({ addQuestion }) => {
   const [newQuestion, setNewQuestion] = useState("");
@@ -50,12 +50,12 @@ const AddNewQuestion = ({ addQuestion }) => {
     }
 
     const newQuestionObj = {
-        id: generateUniqueId(),
+      id: generateUniqueId(),
       question: newQuestion,
       answers: newAnswers.filter((answer) => answer.trim() !== ""),
       correctAns: correctAns,
     };
-    
+
     // Call the addQuestion function to update the state
     addQuestion(newQuestionObj);
 

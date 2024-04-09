@@ -50,11 +50,11 @@ const UpdateQuestion = ({
   };
 
   return (
-    <div className="relative my-4 w-full mx-auto max-w-[420px] bg-blue-700 h-auto">
+    <div className="relative my-4 w-full mx-auto max-w-[420px] bg-blue-500 h-auto">
       {isEditing ? (
         <>
           {/*UPDATE */}
-          <div className="p-4 bg-blue-700 w-full h-[500px] mb-6">
+          <div className="p-4 bg-blue-500 w-full h-[500px] mb-6">
             <div className="mb-4">
               <p className="text-white mb-1">Question: </p>
               <input
@@ -110,7 +110,7 @@ const UpdateQuestion = ({
       ) : (
         <>
           {/**Current */}
-          <div className="p-4 bg-blue-700 h-[440px]">
+          <div className="p-4 bg-blue-500 h-[440px]">
             <p className="text-white">Id: {id}</p>
             <h2 className="text-xl font-semibold text-white py-4">
               {question}
@@ -130,7 +130,7 @@ const UpdateQuestion = ({
             <div className="flex justify-center w-full mx-auto gap-2 sm:gap-6 absolute left-0 bottom-2 sm:bottom-4 ">
               <button
                 onClick={() => setIsEditing(true)}
-                className="bg-[#292054] uppercase tracking-wider text-white font-medium px-4 py-1 rounded-md"
+                className="bg-green-600 uppercase tracking-wider text-white font-medium px-4 py-1 rounded-md"
               >
                 Edit
               </button>

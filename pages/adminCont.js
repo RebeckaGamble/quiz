@@ -9,7 +9,7 @@ function adminPage() {
 
   return (
     <div>
-        <Nav />
+      <Nav />
       <div className="bg-slate-50 pt-10">
         {/**Add new questions */}
         <AddNewQuestion addQuestion={addQuestion} />

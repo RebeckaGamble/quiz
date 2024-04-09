@@ -10,13 +10,13 @@ function GameCard({
   const handleAnswerClick = (answer) => {
     if (!chosenAnswer) {
       onAnswerClick(answer);
-      //   console.log("user ans", answer, "correct ans:", correctAns)
+      //console.log("user ans", answer, "correct ans:", correctAns)
     }
   };
- 
+
   return (
-    <div className="sm:p-4 bg-blue-800">
-      <h2 id="question" className="text-xl font-semibold text-white py-4">
+    <div className="sm:p-4 bg-slate-50">
+      <h2 id="question" className="text-xl font-semibold text-black py-4">
         {question}
       </h2>
       <ul className="">
@@ -25,11 +25,11 @@ function GameCard({
             <li key={index}>
               <button
                 onClick={() => handleAnswerClick(answer)}
-                className={`bg-white mb-4 text-[18px] text-slate-700 py-1 font-medium w-full border border-slate-800 rounded-sm ${
+                className={`bg-white mb-4 text-[18px] text-slate-700 py-1 font-medium w-full border border-slate-400 rounded-sm ${
                   chosenAnswer === answer
                     ? chosenAnswer === correctAns
-                      ? "bg-green-500 text-[#fff]" //border-green-500 text-green-500
-                      : "bg-red-500 text-[#fff]" //border-red-500 text-red-500
+                      ? "bg-green-700 text-white" //border-green-500 text-green-500
+                      : "bg-red-700 text-white" //border-red-500 text-red-500
                     : ""
                 }`}
               >
